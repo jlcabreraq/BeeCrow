@@ -1,7 +1,8 @@
-select p.name, pr.name, p.price,
+select p.name, pr.name, p.price
 from products as p
+inner join providers as pr
+on p.id_providers = pr.id
 inner join categories as c
 on p.id_categories = c.id 
-inner join providers as pr
-on c.id_providers = pr.id
-where c.name = 'Super Luxury'
+where p.price > 1000
+and c.name = 'Super Luxury'
