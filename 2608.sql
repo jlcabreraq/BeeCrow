@@ -1,0 +1,1 @@
+select MAX(price), select MIN(price) from products
